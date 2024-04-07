@@ -120,7 +120,7 @@ const ConvesationPage = () => {
                 className={cn(
                   "p-8 w-full flex items-start gap-x-8 rounded-lg  ",
                   message.role === "user"
-                    ? "bg-white dark:bg-black"
+                    ? "bg-none"
                     : "bg-muted "
                 )}
               >

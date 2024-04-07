@@ -19,6 +19,7 @@ import {
 
 
 import { InfiniteMovingCardsDemo } from "./testimonialsmotiona";
+import SectionHeading from "./section-heading";
 
 const testimonials = [
   {
@@ -74,8 +75,8 @@ const counter = [
 export const LandingContent = () => {
   return (
     <div className="px-10 pb-20 bg-white dark:bg-black  ">
-      <h2 className="text-3xl font-medium capitalize mb-8 text-center">
-        Testimonials
+      <h2 className="text-3xl font-medium capitalize text-center">
+      <SectionHeading>Testimonials</SectionHeading>
       </h2>
 
       <InfiniteMovingCardsDemo/>

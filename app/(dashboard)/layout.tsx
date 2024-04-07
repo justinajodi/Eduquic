@@ -17,7 +17,7 @@ const DashboardLayout = ({children}: {children: React.ReactNode;}) =>
         {children}
       </main>
       
-      <p className="pl-56 text-right dark:bg-black dark:text-white bg-zinc-100 text-muted-foreground p-4 text-sm font-semibold">&copy; 2024 www.eduquic.com - All Rights Reserved.</p>  
+      {/* <p className="pl-56 text-right  mt-10 text-muted-foreground p-4 text-sm font-semibold">&copy; 2024 www.eduquic.com - All Rights Reserved.</p>   */}
 
     </div>
      </>

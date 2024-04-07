@@ -93,7 +93,7 @@ export function NavigationMenuDemo() {
         
         <Link
           href={isSignedIn ? "/dashboard" : "/sign-up"}
-          className="relative sm:p-2 sm:mr-2 mr-6   font-medium text-white sm:text-sm group "
+          className="relative sm:p-2 sm:mr-2 mr-8   font-medium text-white sm:text-sm group "
         >
           {isSignedIn &&(<Button>Dashboard</Button>)}
           {!isSignedIn &&(<Button>Sign-in</Button>)}

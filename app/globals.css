@@ -1,3 +1,5 @@
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,6 +26,7 @@ body,
 .cl-internal-b3fm6y {
   background-color: #ff006600;
 }
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -84,10 +87,10 @@ body,
   font-size: 16px !important;
 }
 
-/* @import "~@uploadthing/react/styles.css" */
 
 
 
+@import "~@uploadthing/react/styles.css"
 
 
 

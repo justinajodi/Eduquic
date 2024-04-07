@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 type questionT = {
   answers: string[];
@@ -63,7 +64,7 @@ export default function Quizy() {
       {questions?.length ? (
         <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-zinc-900 md:text-5xl lg:text-6xl dark:text-white">
           Question No{" "}
-          <span className="text-rose-600 dark:text-rose-500">
+          <span className="text-rose-600 dark:text-rose-600">
             #{config.numberOfQuestion - questions.length + 1}
           </span>
           .
@@ -77,17 +78,18 @@ export default function Quizy() {
       )}
 
       {!loading && !!questions?.length && (
-        <p className="text-2xl ">Score: {config.score}</p>
+        <Button variant="default" className="p-5 rounded-full text-2xl">{config.score}</Button>
       )}
 
       {!questions?.length && !loading && (
         <div className="flex flex-col justify-center items-center ">
-          <Player
-            src="https://assets6.lottiefiles.com/packages/lf20_touohxv0.json"
+          <Image
+            src="/trophy.png"
             className="player"
-            loop
-            autoplay
-            style={{ height: "400px", width: "400px" }}
+          alt="ha"
+          width={400}
+          height={400}
+        
           />
           <h1 className=" mb-10 text-4xl font-extrabold tracking-tight lg:text-5xl">
             Your Score :{" "}{config.score}
@@ -106,7 +108,7 @@ export default function Quizy() {
 
       {!questions && <p>loading...</p>}
       {!!questions && !!questions?.length && (
-        <section className="shadow-2xl mt-2 mb-10 p-10 w-[90%] rounded-lg flex flex-col justify-center items-center shadow-zinc-200   dark:shadow-md dark:shadow-rose-500/50">
+        <section className="shadow-2xl mt-2 mb-10 p-10 w-[90%] rounded-lg flex flex-col justify-center items-center    ">
           <h4 className="mb-4 text-center  text-lg font-extrabold leading-none tracking-tight md:text-2xl lg:text-4xl  text-zinc-900 dark:text-zinc-100">
             {decode(questions[0].question)}
           </h4>
@@ -133,7 +135,7 @@ export default function Quizy() {
             })}
           </div>
 
-          <Button onClick={handleNext} className="text-2xl font-light p-4">
+          <Button onClick={handleNext} className="">
             Next
           </Button>
         </section>

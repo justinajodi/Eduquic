@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 
 export function InfiniteMovingCardsDemo() {
   return (
-    <div className="h-[40rem] rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+    <div className="h-[40rem] rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden mt-0">
       <InfiniteMovingCards
         items={testimonials}
         direction="right"
